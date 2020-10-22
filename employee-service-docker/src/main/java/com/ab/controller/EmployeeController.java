@@ -8,13 +8,15 @@ import com.ab.model.Employee;
 import com.ab.service.EmployeeService;
 
 @RestController
+
 public class EmployeeController {
-	
+
 	@Autowired
 	private EmployeeService employeeService;
-	
+
 	@GetMapping("/employees")
 	public Employee listEmployees() {
+
 		return employeeService.listEmployees();
 	}
 
