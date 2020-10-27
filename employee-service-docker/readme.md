@@ -17,3 +17,22 @@ docker history ab007docker/employee-service-docker:v1
 docker build -t ab007docker/employee-service-docker:v1 .
 
 docker run -p 8080:8080 ab007docker/employee-service-docker:v1
+
+## Maven Integration
+## Spotify Plugin
+mvn clean package
+
+Reads Dockerfile and build image
+
+Run the image.
+
+## JIB Plugin.
+## Automatically generates Docker image. Sperates class , resources and dependency.
+
+Docker file is not required. Remove Dockerfile and Spotify Plugin.
+
+mvn clean package
+
+Run the image.
+
+
