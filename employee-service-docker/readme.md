@@ -1,38 +1,25 @@
+# Run Spring Boot Application in Docker with Maven Integration.
+Spotify Plugin. Reads Dockerfile and build image.
+
+# Run the image
+docker run -p 8080:8080 employee-service-docker:1.0
+# Version
 docker --version
-
-docker run hello-world:latest
-
+# List of images
 docker images
-
+# List of containers
 docker container ls
 
-docker container stop fb28e56aa23e
+# Push the Image into Docker Hub
+docker login
+# Tag
+docker tag employee-service-docker:1.0 ab007cloud/employee-service-docker:1.0
+# Push
+docker push ab007cloud/employee-service-docker:1.0
 
-## History of images
-docker history ab007docker/employee-service-docker:v1
-
-
-## Deploy Spring Boot Application in Docker
-## Go the project path
-docker build -t ab007docker/employee-service-docker:v1 .
-
-docker run -p 8080:8080 ab007docker/employee-service-docker:v1
-
-## Maven Integration
-## Spotify Plugin
-mvn clean package
-
-Reads Dockerfile and build image
-
-Run the image.
-
-## JIB Plugin.
-## Automatically generates Docker image. Sperates class , resources and dependency.
+# JIB Plugin. Automatically generates Docker image. Sperates class , resources and dependency.
 
 Docker file is not required. Remove Dockerfile and Spotify Plugin.
 
-mvn clean package
-
-Run the image.
 
 
