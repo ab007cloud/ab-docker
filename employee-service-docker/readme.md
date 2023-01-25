@@ -4,13 +4,16 @@ Spotify Plugin. Reads Dockerfile and build image.
 docker build -t **imagename** .
 # Run the image
 docker run -p 8080:8080 employee-service-docker:1.0
+# Run Docker Container
 docker run -dt --name **container-name** **image-name** 
 # Version
 docker --version
 # List of images
 docker images
-# List of containers
-docker container ls
+# List of running containers
+docker ps
+# List of all containers 
+docker ps - a
 
 
 # Push the Image into Docker Hub
