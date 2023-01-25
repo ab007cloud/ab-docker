@@ -1,7 +1,7 @@
 # Run Spring Boot Application in Docker with Maven Integration.
 Spotify Plugin. Reads Dockerfile and build image.
 # Build the docker image from Dockerfile
-docker build -t <imagename> .
+docker build -t **imagename** .
 # Run the image
 docker run -p 8080:8080 employee-service-docker:1.0
 # Version
